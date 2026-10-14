@@ -1,4 +1,4 @@
-package mx.unison.e3;
+package mx.unison.basicos;
 
 
 
@@ -38,6 +38,7 @@ public class Cube extends JPanel {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(new Cube());
+        frame.validate();
     }
 
 }

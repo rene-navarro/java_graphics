@@ -1,18 +1,20 @@
-package mx.unison.e1;
+package mx.unison.basicos;
 
 import java.awt.*;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class Dibujo extends JPanel {
+public class Circulo extends JPanel {
+    public static final Logger LOG = Logger.getLogger(Circulo.class.getName());
 
     Dimension dimension;
 
-    public Dibujo() {
+    public Circulo() {
         super();
         dimension = new Dimension(640, 480);
     }
-    public Dibujo(int width, int height) {
+    public Circulo(int width, int height) {
         super();
         dimension = new Dimension(width, height);
     }
@@ -23,7 +25,7 @@ public class Dibujo extends JPanel {
     }
 
     public void paint(Graphics g) {
-        System.out.println("paint");
+       LOG.info("paint");
         Graphics2D g2d = (Graphics2D) g;
 
         // Dibujar ciclo de 50 pixeles de diametro rojo relleno con borde azul
@@ -36,9 +38,8 @@ public class Dibujo extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        System.out.println("paintComponent");
+        LOG.info("paintComponent");
         Graphics2D g2d = (Graphics2D) g;
-
 
         g2d.setColor(Color.BLACK);
         g2d.drawRect(10, 10, 50, 50);
@@ -51,7 +52,7 @@ public class Dibujo extends JPanel {
         frame.setSize(640,480);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(new Dibujo());
+        frame.add(new Circulo());
         frame.setResizable(false);
         frame.pack();
     }

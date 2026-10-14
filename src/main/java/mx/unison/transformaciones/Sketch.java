@@ -1,6 +1,4 @@
-package mx.unison.e5;
-
-import mx.unison.e1.Dibujo;
+package mx.unison.transformaciones;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -23,7 +21,6 @@ public class Sketch extends JPanel {
         double angle = 45;
 
         String text = "Hello World";
-
 
         g2d.setColor(Color.RED);
         g2d.fillRect(10, 10, 50, 50);

@@ -1,4 +1,4 @@
-package mx.unison.e2;
+package mx.unison.escalar;
 
 import javax.swing.*;
 import java.awt.event.KeyAdapter;
