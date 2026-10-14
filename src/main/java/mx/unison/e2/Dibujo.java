@@ -5,6 +5,7 @@ import java.awt.*;
 
 public class Dibujo extends JPanel {
 
+    Dimension dimension;
     public static final int YCENTER = 240;
     public static final int XCENTER = 320;
 
@@ -13,7 +14,19 @@ public class Dibujo extends JPanel {
 
     public Dibujo() {
         super();
+        dimension = new Dimension(640, 480);
         radio = 50;
+    }
+
+    public Dibujo(int width, int height) {
+        super();
+        dimension = new Dimension(width, height);
+        radio = 50;
+    }
+
+    @Override
+    public Dimension getPreferredSize() {
+        return dimension;
     }
 
     public void paint(Graphics g) {
